@@ -3,6 +3,11 @@ import { createOrder, getAllOrders, updateOrder } from "../controllers/order.con
 
 export const orderRoutes = Router();
 
-orderRoutes.get('/', getAllOrders);
+// createOrder - (placed by sales guy)
 orderRoutes.post('/', createOrder);
+
+// viewOrder - (with the vendor details assigned by the system)
+orderRoutes.get('/', getAllOrders);
+
+// commitOrder - finalize the order and move it for fulfillment
 orderRoutes.patch('/:id', updateOrder);

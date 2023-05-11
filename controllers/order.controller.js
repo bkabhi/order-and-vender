@@ -30,7 +30,7 @@ export const getAllOrders = async (req, res) => {
 }
 
 
-// update order
+// update order 
 export const updateOrder = async (req, res) => {
     const orderId = req.params.id;
     try {
